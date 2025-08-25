@@ -1,0 +1,148 @@
+Received: from DS0PR08MB10516.namprd08.prod.outlook.com (2603:10b6:8:1f9::11)
+ by SN4PR0801MB3727.namprd08.prod.outlook.com with HTTPS; Fri, 2 Aug 2024
+ 17:04:47 +0000
+Received: from DM5PR07CA0108.namprd07.prod.outlook.com (2603:10b6:4:ae::37) by
+ DS0PR08MB10516.namprd08.prod.outlook.com (2603:10b6:8:1f9::11) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7828.21; Fri, 2 Aug 2024 17:04:46 +0000
+Received: from CH3PEPF00000013.namprd21.prod.outlook.com
+ (2603:10b6:4:ae:cafe::41) by DM5PR07CA0108.outlook.office365.com
+ (2603:10b6:4:ae::37) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7828.23 via Frontend
+ Transport; Fri, 2 Aug 2024 17:04:46 +0000
+Authentication-Results: spf=pass (sender IP is 148.129.75.15)
+ smtp.mailfrom=census.gov; dkim=pass (signature was verified)
+ header.d=census.gov;dmarc=bestguesspass action=none
+ header.from=census.gov;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of census.gov designates
+ 148.129.75.15 as permitted sender) receiver=protection.outlook.com;
+ client-ip=148.129.75.15; helo=bcc-mail2.tco.census.gov; pr=C
+Received: from bcc-mail2.tco.census.gov (148.129.75.15) by
+ CH3PEPF00000013.mail.protection.outlook.com (10.167.244.118) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7849.0 via Frontend Transport; Fri, 2 Aug 2024 17:04:45 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=census.gov; i=@census.gov; q=dns/txt; s=20140626;
+  t=1722618285; x=1754154285;
+  h=date:from:to:message-id:subject:mime-version:
+   content-transfer-encoding;
+  bh=vYEUu09T/FFMsW78J4GAM8HPqSNSpzYqaiXHDeDYFzc=;
+  b=S+0uoQiv4AhfrnvvHrJHWrSGMcY6NIOmxjvZ2r9BBhqPFAMmcDoNeptl
+   ZlzjYw1Hon5MifIEntPZZPRCDcDHtukMCIfSvWeqrC3WgwkQNbbooQesY
+   JonhZAk6nw/Lyql/3IBHeyK+fA3Z4McfNB6g99WP+MzkeCupFUsjUHuRz
+   SQE+yFDLXY417zh0NfbNckxsbn/qBW1RH5hg6DaT9QLVQJL6xoi8aiwh4
+   sdYUw1pLBk+MMu2rRzHSz4TSuF5DrlyMNxVVF0vw3HajzkpUvEA/GzPpl
+   HfOJCtgIFCLPVPS+jShssdzY6f0CTvwm1q1ExjxRmitz8BJfK9uff4YFm
+   w==;
+X-IronPort-AV: E=Sophos;i="6.09,258,1716264000"; 
+   d="scan'208,217";a="565351913"
+Received: from unknown (HELO hq-mail1.tco.census.gov) ([148.129.191.15])
+  by bcc-mail2.tco.census.gov with ESMTP; 02 Aug 2024 13:04:45 -0400
+Received: from cedsci-web42.stage.ced.census.gov ([172.18.32.243])
+  by hq-mail1.tco.census.gov with ESMTP; 02 Aug 2024 13:04:44 -0400
+Date: Fri, 2 Aug 2024 13:04:44 -0400 (EDT)
+From: Census Data API Service <no-reply@census.gov>
+To: mai-anh.tran@yale.edu
+Message-ID: <198951415.2096.1722618284276.JavaMail.no-reply@census.gov>
+Subject: Census Data API Key Request
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Return-Path: no-reply@census.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Aug 2024 17:04:45.4036
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 6cdc41df-94fb-4df3-4bba-08dcb315358f
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: dd8cbebb-2139-4df8-b411-4e3e87abeb5c:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ CH3PEPF00000013:EE_|DS0PR08MB10516:EE_|SN4PR0801MB3727:EE_
+X-MS-Exchange-Organization-AuthSource:
+ CH3PEPF00000013.namprd21.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 6cdc41df-94fb-4df3-4bba-08dcb315358f
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040;
+X-Forefront-Antispam-Report:
+ CIP:148.129.75.15;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:bcc-mail2.tco.census.gov;PTR:bcc-mail2.tco.census.gov;CAT:NONE;SFS:(13230040);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Aug 2024 17:04:45.1536
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6cdc41df-94fb-4df3-4bba-08dcb315358f
+X-MS-Exchange-CrossTenant-Id: dd8cbebb-2139-4df8-b411-4e3e87abeb5c
+X-MS-Exchange-CrossTenant-AuthSource:
+ CH3PEPF00000013.namprd21.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR08MB10516
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.7993405
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7828.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003)(1420198);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?9M6KM4WVSm1TnlU/y+ff+l7lMl3hGkFyn1C2je1bSjHp0D0q/IuMCpoLa8cm?=
+ =?us-ascii?Q?ZFAqh/HJS4AwkW5Brkmf7nyFuO/S6hQHA3sVUaKbq+6567tudn6eHk6cR3Nm?=
+ =?us-ascii?Q?SS3dcLse1F7iubWAR+9vpEjIMWT6Me9F4am4Y+HVC7iGAOHTBO/hxHXM0ziN?=
+ =?us-ascii?Q?bTmNgC/+VfBBBnahZWcglG2clg6ykc4sC9zBh2BzPFFAq25MJXCUP0a8awEx?=
+ =?us-ascii?Q?du6h5R4U90udVH3H0XTrJfoxOE6iuQHx8+SOGqNlchgTqFueO0j4adJ0VbB2?=
+ =?us-ascii?Q?tlHxU7WacM7VRKd5q2dZRMZxlBqdi19Ks/rxGCpz83ooNliLwn9LT1kHuuf+?=
+ =?us-ascii?Q?34cSNbcXcW2Vq1H81CshTs+auz2Mo6YE72NFdDkHPX2HUpyJubmvGf6EfB6T?=
+ =?us-ascii?Q?xb308FzFDill74BZORhkvhtX4Qqzf9gAYhysF3Wk5eb6wFESL3x6M8dsq2ch?=
+ =?us-ascii?Q?j5s5k1iKo9N3mp16Gr1EyjZUxYO04T7Ou6gZOnCQpdEGIt/M6kyxcNjVKASa?=
+ =?us-ascii?Q?MipJiBW6e5X/bUC67u/uJ6iaVu5AYuFrsjBxg8PRXC+0PUo90Qw6s4Vjcj49?=
+ =?us-ascii?Q?r83qTkQaZjbImvCyuii1Bq/k4w9WCsZMsYE8FA+rHJZ/w+QD52UdcKxnlwFo?=
+ =?us-ascii?Q?fQZL5KtO2jX3R5xFJf1evOsFrd41g4vU7v5mbzrPpBnwoa47sYFl1kKjgy1C?=
+ =?us-ascii?Q?upF9pdLOff1leBiP7T82v/YVrkB4r/1Mj4xaDGl8zRiSWmDDLJ6qshoSdXiN?=
+ =?us-ascii?Q?G9vXnuEnNmNeAyibk7bv9/KpBNqmpc/fqX5T0RWX769alo8fUbpvLavICYb9?=
+ =?us-ascii?Q?I/A5+7DR8dl7QqCtzWSgbEjwoDCjInr3e/0JaSxuMQNtE6wgy1g7NecREw/A?=
+ =?us-ascii?Q?X8vGe1WxhuUvMwEfqq7jmWtRbI1W/nhnm8QXwE+/KW5myz889h9U6JwJea58?=
+ =?us-ascii?Q?Q4nWeetBsGrxkMjs6Y4QATY6RlMzHGhM0CANJUgc3WLoxpT/lCCOxhL5O4k5?=
+ =?us-ascii?Q?+TsPtscvrzEfOj3tRbQ05QSa+3ike5AcitEFtBOHz+91FEHZrLcS+qDMdePH?=
+ =?us-ascii?Q?EQbUX4/mvERVBWQH3bI9Egw77Uc7tSPrIzZvujyiCj7+T/AHjdFWp3Tjmjr5?=
+ =?us-ascii?Q?1aayVjCBT1Gz3zSuzeQWjfQ+htzaBpMYTICxeMZPBt/mdPNryeeLhDdwF/eN?=
+ =?us-ascii?Q?mvAzsKX9RjEmnWNmlqUmg8tr19KlRM6B3vJKhbcAOv8yz7dOrXYRVm67koCZ?=
+ =?us-ascii?Q?pQxf+ifUwTIdcBTDMVKLAj1ya7e1ACmmzvb7f86dcdZvsMitQBw92YNaMFON?=
+ =?us-ascii?Q?eZH3T7Z2OonKHf+wyEUAxe2Vzry0lRtIIsFVNPz8Ow67AgQ8MiWmQGGAxOYA?=
+ =?us-ascii?Q?03MQdD4hBmw2KiU4c7oAtBI2QrFDz9KOsI3M3DEcgQ9rThy4DpCqz860l7iO?=
+ =?us-ascii?Q?SVzOyi3UPGNAbckKaZlwCVy8DW/prta89c1rXuzD869xLr0Q69ZTVJDxA8l3?=
+ =?us-ascii?Q?fL3JRK73u50SxwqdLf95QODSS5WFNSUHbGbZm5H3SbkTdktIBwmNZCc0rHii?=
+ =?us-ascii?Q?HKZC6Q+ZZYq0ChcEStWbRLSjGi6vk++eZXvvTlvuMZECDl6vdd95jx1xUFcF?=
+ =?us-ascii?Q?z8sm0Tl4eL01Rq/IAwvuLh0WcWqVv9rSNhdLdC3VT+ekhlh58FcYgz9RHqtL?=
+ =?us-ascii?Q?w7KvZ2VM1QRRyGQbjZJCSj5nFCljenLOwi3yNcaI+xJsmR5gxaFF0mq1Qwv6?=
+ =?us-ascii?Q?OGjg3wJdWki530VxcPXVRjhWNS2bmALUS3Zh5B06tg+Dlg96+oX0sE0FICFR?=
+ =?us-ascii?Q?chBznkTcMZv7jR7dqj79DUuZ9zvjEIUsuuFlTMCVlct10gr6hp/yJR7N8Xa2?=
+ =?us-ascii?Q?FViuZIXrF8fArtLMomzLKjegUq2CVPVacvHd35CdGvbTO2eDBA9pCRYC1dak?=
+ =?us-ascii?Q?noJ4kMBhjJEP20TKAkefz+sFhhADt6nvPDnKrAX3h9JJDZ2xLCX3LWeR5Lyp?=
+ =?us-ascii?Q?b4GS3e0jQuwGt2ohdbv251ijRBzXsqbE5skruEhdS+ntYwR43hZV9pEx+pqt?=
+ =?us-ascii?Q?uBoxGpPj?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii"><title xmlns:cb="http://www.census.gov/2011/DataAPI">Census Data API Key Request</title>
+
+<meta name="DC.title" content="Census Data API Key Request">
+<meta name="DC.description" content="Automated message from Census Data API">
+<meta name="DC.date.created" scheme="ISO8601" content="28-11-2011">
+<meta name="DC.date.reviewed" scheme="ISO8601" content="28-11-2011">
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+<meta name="author" content="no-reply@census.gov">
+<meta name="description" content="Automated message from Census Data API">
+</head>
+<body>
+<p>Hello!</p>
+<p>Thank you for your interest in the Census Data API.  Your API key is
+<em>1cc69f2fa85159a956494926c3ed9c264eefd099</em>.
+
+
+Please <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapi.census.gov%2Fdata%2FKeySignup%3Fvalidate%3D1cc69f2fa85159a956494926c3ed9c264eefd099&amp;data=05%7C02%7Cmai-anh.tran%40yale.edu%7C6cdc41df94fb4df34bba08dcb315358f%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C638582150880402914%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=vzel4pSbSvqm%2FRsdlT0PBde7TSElC5vnTvtK9ugv%2Flk%3D&amp;reserved=0" originalsrc="https://api.census.gov/data/KeySignup?validate=1cc69f2fa85159a956494926c3ed9c264eefd099" shash="eAsk6SZyVY8bKA9dFD+cFsIsX8C5q3H9zSVezTehxY77kNC7ScbNC2jRrdC/2997GUlR+CR7hcepgpXV0rp5vlzG4ezcI8jti3Z+Sy7Tegaz39ADrTK+o1aItHFhlbKrqVeLX3O8Dvh/yPUPjyQvDaZDKOLqL1hV9cuWzWwoVE4=">click here to activate your key</a>.
+    </p>
+<p>Save this email for future reference.</p>
+<p>Have Fun,</p>
+<p>The Census Bureau API Team</p>
+<address>Follow @uscensusbureau on twitter for API updates.</address>
+</body>
+</html>
